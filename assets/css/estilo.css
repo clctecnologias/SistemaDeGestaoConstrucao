@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .linha {
+        @apply bg-lr w-9 h-1 m-1 rounded-full duration-150
+    }
+
+    header.active .listaOpcaoMenu {
+        clip-path: circle(1500px at 0% -0%);
+    }
+
+    header.active .linha1 {
+        @apply relative rotate-45 top-2
+    }
+
+    header.active .linha2 {
+        @apply relative -rotate-45
+    }
+
+    header.active .linha3 {
+        @apply opacity-0
+    }
+
+    header.active .opcaoMenu {
+        @apply opacity-100
+    }
+
+    .hr {
+        @apply bg-orange-950 h-0.5 w-1/2 my-8 rounded-full
+    }
+
+    .hrd {
+        @apply mr-0 ml-auto
+    }
+
+
+    @media screen and (max-width:768px) {
+
+        .listaOpcaoMenu {
+            clip-path: circle(100px at 90% -15%);
+            @apply shadow-2xl
+        }
+    }
+
+    .opcaoMenu {
+        @apply font-bold text-orange-500 opacity-0 duration-1000 ease-in no-underline md:opacity-100 md:mx-2 md:text-pr md:font-light
+    }
+
+    .txtDestaque {
+        @apply text-lr
+    }
+
+    .secao {
+        @apply px-6
+    }
+
+    .tituloSection {
+        @apply font-mont font-black text-3xl text-center
+    }
+
+    .txtSection {
+        @apply text-center font-inter
+    }
+
+    .cardServico {
+        @apply mt-4 p-2 w-5/6 flex justify-center flex-col text-center font-inter font-light rounded-xl shadow-xl border-slate-100 border-2 border-solid md:w-4/12 md:m-1 lg:w-3/12 lg:m-1 hover:scale-105 duration-500 ease-in-out active:scale-105
+    }
+
+    .icoNome {
+        @apply flex items-center justify-center flex-col
+    }
+    
+    .icoNome i {
+        @apply bg-slate-100 text-lr p-3 rounded-3xl
+    }
+
+    .nomeServico {
+        @apply font-extrabold ms-2 text-xl text-lr
+    }
+
+    .navTodoComentario {
+        @apply flex flex-col items-center bg-white shadow-2xl p-1 rounded-3xl border-solid border-2 border-lr pt-10 md:border-slate-300 md:pt-3 md:w-10/12 md:ml-5
+    }
+
+    .navInfoCliente {
+        @apply flex flex-col items-center justify-center text-pr
+    }
+
+    .imgCliente {
+        @apply rounded-full w-32 h-32 border-solid border-2 shadow-fusco shadow-xl relative hover:bottom-4 z-10 
+    }
+
+    .nomeCliente {
+        @apply font-bold
+    }
+
+    .profissaoCliente {
+        @apply font-semibold text-lr
+    }
+
+    .opiniaoCliente {
+        @apply font-inter text-center font-light
+    }
+
+    .icoRodape {
+        @apply text-2xl top-3 mx-4 relative hover:bottom-3 active:bottom-3 hover:relative no-underline
+    }
+
+    .botao {
+        @apply bg-orange-500 px-3 rounded-full py-2 font-mont font-bold text-white
+    }
+
+    .botaoFooter {
+        @apply px-4 hover:shadow-2xl active:shadow-2xl
+    }
+
+    .navCarouselAbout {
+        @apply flex items-center justify-center text-lr text-center hover:underline active:underline
+    }
+
+    .navCarouselAbout h3 {
+        @apply font-extrabold font-mont
+    }
+
+}
